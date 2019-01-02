@@ -5,5 +5,9 @@ def invest(amount, rate, time):
     for t in range(1, time + 1):
         amount = amount * (rate + 1)
         print('year {}: {}'.format(t, amount))
+    return amount
 
-invest(3.5, 0.1, 3)
+value_good = invest(3.5, -0.1, 3)
+print value_good*3
+value_bad  = invest(3.5, 0.1, 3)
+print value_bad*3
