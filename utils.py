@@ -4,11 +4,19 @@
 import logging
 
 def complex(amount, rate, time):
-    print('princical amount: {}'.format(amount))
+    #print('princical amount: {}'.format(amount))
     for t in range(1, time + 1):
-        amount = amount * (rate + 1)
+        amount = round(amount * (rate + 1),2)
         #print('year {}: {}'.format(t, amount))
     return amount
+
+def complex_detail(amount, rate, time):
+    ret_list = []
+    for t in range(1, time + 1):
+        amount = round(amount * (rate + 1),2)
+        ret_list.append((t,amount))
+    return ret_list
+
 
 def users_value(user_cnt, user_value):
     return user_cnt*user_value
